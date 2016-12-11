@@ -1,0 +1,94 @@
+<!--
+  ~ Copyright (C) 2015 Drakeet <drakeet.me@gmail.com>
+  ~
+  ~ This file is part of Meizhi
+  ~
+  ~ Meizhi is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Meizhi is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Meizhi.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.drakeet.meizhi.ui.GankFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_gank">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/gank_header_height"
+            android:paddingBottom="@dimen/gank_footer_padding"
+            android:clipToPadding="false"/>
+
+        <me.henrytao.smoothappbarlayout.SmoothAppBarLayout
+            android:id="@+id/header_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gank_header_height">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleTextAppearance="@style/CollapsingToolbarTitleStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_collapseMode="parallax">
+
+                    <me.drakeet.meizhi.widget.VideoImageView
+                        android:id="@+id/video_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/theme_primary_darker"
+                        android:scaleType="centerCrop"/>
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_play"/>
+
+                </FrameLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </me.henrytao.smoothappbarlayout.SmoothAppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <ViewStub
+        android:id="@+id/stub_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/gank_header_height"
+        android:layout="@layout/view_empty"/>
+
+    <ViewStub
+        android:id="@+id/stub_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/view_video"
+        android:inflatedId="@+id/inflate_video_view"/>
+
+</FrameLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Drakeet <drakeet.me@gmail.com>
+  ~
+  ~ This file is part of Meizhi
+  ~
+  ~ Meizhi is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Meizhi is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Meizhi.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:padding="@dimen/padding_gank_item"
+        android:textSize="@dimen/text_size_gank_category"
+        android:textStyle="bold"
+        tools:background="@color/md_amber_100"
+        android:textColor="@color/md_black_1000"
+        tools:text="Category"/>
+
+    <LinearLayout
+        android:id="@+id/gank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/padding_gank_item"
+        android:paddingRight="@dimen/padding_gank_item"
+        android:paddingTop="@dimen/padding_vertical_gank_item"
+        android:paddingBottom="@dimen/padding_vertical_gank_item"
+        android:background="?attr/selectableItemBackground"
+        tools:background="@color/md_amber_100">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="*"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_gank_title"
+            android:textColor="@color/md_grey_900"
+            tools:text="叔叔、叔叔，西湖怎么走？"/>
+    </LinearLayout>
+
+</LinearLayout>

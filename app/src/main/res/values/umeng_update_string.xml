@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Drakeet <drakeet.me@gmail.com>
+  ~
+  ~ This file is part of Meizhi
+  ~
+  ~ Meizhi is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Meizhi is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Meizhi.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+
+    <string name="UMBreak_Network">Please make sure you are connected to internet,update failed</string>
+    <string name="UMUpdateTitle">New version found</string>
+    <string name="UMNewVersion">Latest version: </string>
+    <string name="UMUpdateContent">Update Content</string>
+    <string name="UMUpdateSize">Update size: </string>
+    <string name="UMTargetSize">Target size: </string>
+    <string name="UMGprsCondition">(Warning: Not WIFI Condition)</string>
+    <string name="UMUpdateNow">Update now</string>
+    <string name="UMAppUpdate">App updating</string>
+    <string name="UMNotNow">Not now</string>
+    <string name="UMIgnore">Ingore this</string>
+    <string name="UMToast_IsUpdating">Updating....</string>
+    <string name="UMDialog_InstallAPK">The lastest version has been downloaded, install now ?</string>
+    <string name="UMUpdateCheck">2.6.0.1.20150312</string>
+
+</resources>

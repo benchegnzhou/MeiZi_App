@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (C) 2015 Drakeet <drakeet.me@gmail.com>
+  ~
+  ~ This file is part of Meizhi
+  ~
+  ~ Meizhi is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ Meizhi is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with Meizhi.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99232323">
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical"
+        android:background="@drawable/umeng_update_dialog_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/umeng_update_wifi_indicator"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="24dp"
+                android:contentDescription="@string/UMGprsCondition"
+                android:src="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textSize="22sp"
+                android:textColor="#63C2FF"
+                android:text="@string/UMUpdateTitle"/>
+
+            <Button
+                android:id="@+id/umeng_update_id_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/umeng_update_button_close_bg_selector"
+                android:focusable="true"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/umeng_update_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:focusable="true"
+                    android:textColor="#8a000000"/>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Ignore CheckBox -->
+
+        <CheckBox
+            android:id="@+id/umeng_update_id_check"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="#AAABAF"
+            android:text="@string/UMIgnore"/>
+
+        <!-- OK&Cancel Button -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/empty_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+
+            <Button
+                style="@style/MaterialButton"
+                android:id="@+id/umeng_update_id_cancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/material_button_height"
+                android:layout_weight="1"
+                android:layout_marginRight="24dp"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:textColor="@color/md_black_1000"
+                android:text="@string/UMNotNow"/>
+
+            <Button
+                style="@style/MaterialButton"
+                android:id="@+id/umeng_update_id_ok"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/material_button_height"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:focusable="true"
+                android:textColor="@color/lite_blue"
+                android:text="@string/UMUpdateNow"/>
+
+            <Button
+                android:id="@+id/umeng_update_id_ignore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/umeng_update_button_cancel_bg_selector"
+                android:focusable="true"
+                android:textColor="#AAABAF"
+                android:text="@string/UMIgnore"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
